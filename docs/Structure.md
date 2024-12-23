@@ -8,7 +8,9 @@
 │   ├── forms.py                   # If using WTForms or any complex form logic.
 │   ├── static/                    # Frontend static assets.
 │   │   ├── css/                   # CSS files.
+│   │   │   └── styles.css         # Main stylesheet.
 │   │   ├── js/                    # JavaScript files.
+│   │   │   └── main.js            # Main JavaScript file.
 │   │   └── images/                # Image assets.
 │   └── templates/                 # Jinja2 templates for HTML rendering.
 │       ├── base.html              # Base template with shared layout (header, footer).
@@ -22,13 +24,18 @@
 │   ├── __init__.py                # Makes `tests` a Python package, can hold shared fixtures.
 │   └── test_example.py            # Example unit/integration/API test; add more as needed.
 ├── docs/                          # Documentation folder for design decisions, architecture, etc.
-│   └── design_overview.md         # Explains the project’s design, data flow, etc.
+│   ├── Database_Schema.md         # Database schema documentation.
+│   ├── Flow App User Stories.md   # User stories documentation.
+│   ├── Flow Task Management Models.md # Task management models documentation.
+│   └── Structure.md               # Project structure documentation (this file).
 ├── scripts/                       # Utility or helper scripts for tasks like seeding data or cron jobs.
-│   └── seed_data.py               # Example script for populating the database with initial data.
+│   ├── init_db.py                 # Database initialization script.
+│   ├── seed_data.py               # Script for populating the database with initial data.
+│   └── validate_schema.py         # Schema validation script.
 ├── deployment/                    # Deployment-related assets for Docker, Kubernetes, etc.
 │   ├── Dockerfile                 # Instructions to build a Docker image for this app.
 │   ├── docker-compose.yml         # Compose file for local dev or staging (e.g., app + DB + Redis).
-│   ├── k8s/                       # (Optional) Kubernetes manifests if deploying to K8s.
+│   ├── k8s/                       # Kubernetes manifests for K8s deployment.
 │   │   ├── deployment.yaml        # Kubernetes Deployment configuration.
 │   │   └── service.yaml           # Kubernetes Service configuration.
 │   └── README.md                  # Notes/steps on how to deploy using Docker/K8s or other platforms.
