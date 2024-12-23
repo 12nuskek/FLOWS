@@ -1,4 +1,3 @@
-my_flask_app/                       # The root folder of your application.
 ├── app/                            # Contains all core application code.
 │   ├── __init__.py                # Initializes Flask app, config, DB, Blueprints, etc.
 │   ├── models.py                  # Holds SQLAlchemy (or other ORM) models.
