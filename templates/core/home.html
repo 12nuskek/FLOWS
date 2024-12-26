@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-4">Welcome to Flow</h1>
+    <p class="lead">Your personal task management solution</p>
+    {% if not user.is_authenticated %}
+    <div class="mt-4">
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg mx-2">Login</a>
+        <a href="{% url 'signup' %}" class="btn btn-outline-primary btn-lg mx-2">Sign Up</a>
+    </div>
+    {% else %}
+    <div class="mt-4">
+        <a href="{% url 'dashboard' %}" class="btn btn-primary btn-lg">Go to Dashboard</a>
+    </div>
+    {% endif %}
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <h3>Organize Tasks</h3>
+        <p>Keep track of your tasks and projects in one place.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>Stay Productive</h3>
+        <p>Manage your time effectively with our intuitive interface.</p>
+    </div>
+    <div class="col-md-4">
+        <h3>Collaborate</h3>
+        <p>Work together with your team seamlessly.</p>
+    </div>
+</div>
+{% endblock %} 

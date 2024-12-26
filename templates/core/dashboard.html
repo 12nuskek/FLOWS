@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Dashboard</h2>
+        <p>Welcome back, {{ user.username }}!</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Tasks Overview</h5>
+                <p class="card-text">You have no tasks yet.</p>
+                <a href="#" class="btn btn-primary">Add Task</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Recent Activity</h5>
+                <p class="card-text">No recent activity.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Quick Actions</h5>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Create New Task</a>
+                    <a href="#" class="list-group-item list-group-item-action">View All Tasks</a>
+                    <a href="{% url 'settings' %}" class="list-group-item list-group-item-action">Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
